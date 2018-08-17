@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.send(JSON.stringify(reply));    
 });
-
-app.listen(3000, () => console.log('The numbers API listens on 3000!'))
+const port = process.env.port || 3000;
+app.listen(port, () => console.log('The numbers API listens on ', port))
